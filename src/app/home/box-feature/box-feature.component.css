@@ -1,0 +1,43 @@
+.card {
+  background-color: #fafafa;
+  height: 274px;
+  border: 0 !important;
+}
+
+.card .box-icon {
+  height: 65px;
+}
+
+.icon-feature {
+  font-size: 35px;
+  background-color: #00bcd4;
+  color: #fff;
+  padding: 15px;
+  border-radius: 50%;
+  transition: all .3s ease-in-out;
+}
+
+
+.card h5 {
+  font-size: 21px;
+}
+
+.card h6 {
+  font-size: 14px;
+  color: #555;
+  line-height: 20px;
+}
+
+.hovered {
+  font-size: 28px;
+  background-color: #00bcd4;
+  color: #fff;
+  padding: 15px;
+  border-radius: 50%;
+  transition: all .3s ease-in-out;
+}
+
+.border-color {
+  border-bottom: 4px solid #00bcd4 !important;
+  transition: all .3s ease-in-out;
+}

@@ -1,0 +1,84 @@
+a {
+  color: #2e2e2e;
+  text-decoration: none;
+}
+
+.list-pruducts h1 {
+  position: relative;
+  font-size: 35px;
+  font-weight: 700px;
+}
+.list-pruducts .container h1::before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 2px;
+  background-color: #00bcd4;
+  right: 47.2%;
+  top: 50px;
+}
+
+.list-pruducts .row {
+  padding-top: 38px;
+  padding-bottom: 70px;
+}
+.card {
+      box-shadow: 0px 2px 18px 0px rgba(198, 198, 198, 0.4);
+}
+.heart {
+    position: absolute;
+    right: 3%;
+    top: 2%;
+    background-color: #00bcd4 !important;
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 18px;
+    color:#fff;
+}
+.card .card-property i,
+.card .card-property small,
+.card .card-body small,
+.footer-site a {
+  color: #999;
+}
+
+.card .line-horizontal {
+  border-bottom: 1px solid #eee;
+  margin: 0 16px;
+}
+
+.category-titr,
+.footer-site i,
+.footer-site h4 {
+  color: #00bcd4 !important;
+}
+
+.footer-site a {
+  border: 1px solid #eee;
+  border-radius: 20px;
+}
+
+.footer-site i::before {
+  font-weight: 600;
+}
+
+.whiteColor {
+  background-color: #00bcd4 !important;
+  color: #fff !important;
+  transition: all .3s;
+}
+
+.iColor {
+  filter: sepia(0) saturate(1) hue-rotate(100deg) brightness(5);
+  transition: all .3s;
+}
+
+/*----------------------------------------------
+                  Media-Query
+  ---------------------------------------------*/
+
+  @media(max-width: 767px){
+    .list-pruducts .container h1::before {
+      right: 44%;
+    }
+  }

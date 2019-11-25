@@ -1,0 +1,25 @@
+.app-feature-footer {
+    margin-top: 20px;
+    background-color: #fafafa;
+    padding: 60px;
+}
+
+.card {
+    border: 0;
+}
+.card-body i {
+    font-size: 45px;
+    color: #00bcd4;
+}
+
+
+/* =========================================================
+                            Media-Query
+   =========================================================
+*/
+
+@media(max-width: 767px){
+    .app-feature-footer {
+      padding: 60px 0px;
+    }
+}

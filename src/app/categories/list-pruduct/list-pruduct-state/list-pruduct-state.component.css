@@ -1,0 +1,79 @@
+/* ================================================
+                     Card
+   ================================================*/
+
+.card .no-gutter {
+  height: 250px;
+}
+
+.card-body .brand,
+.card .lni-folder {
+  color: #00bcd4 !important;
+}
+
+.lni-heart {
+  position: absolute;
+  right: 3%;
+  top: 3%;
+  background-color: #00bcd4 !important;
+  padding: 7px;
+  border-radius: 50%;
+  font-size: 18px;
+  color: #fff !important;
+}
+
+.card small,
+.card i {
+  color: #999;
+}
+
+.box-data a,
+.card-text small {
+  font-size: 80%;
+  font-weight: 500;
+}
+
+.box-data i {
+  font-weight: 600;
+}
+
+.box-data .box-data-1 a:hover,
+.box-data .box-data-2 a:hover {
+  color: #00bcd4 !important;
+  transition: all .3s;
+}
+
+.lni-folder {
+  font-size: 14px;
+}
+
+.whiteColor {
+  background-color: #00bcd4 !important;
+  color: #fff !important;
+  transition: all .3s;
+}
+
+.iColor {
+  filter: sepia(0) saturate(1) hue-rotate(100deg) brightness(5);
+  font-weight: 600;
+  transition: all .3s;
+}
+
+.footer {
+  margin: 18px 0 0 0;
+}
+
+.footer h5 {
+  color: #00bcd4
+}
+
+.footer small {
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  border-radius: 50px;
+}
+
+.lni-check-box {
+  color: #00bcd4 !important;
+  font-weight: 600
+}

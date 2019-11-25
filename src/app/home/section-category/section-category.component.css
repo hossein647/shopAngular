@@ -1,0 +1,37 @@
+a {
+  text-decoration: none;
+  color: #484848;
+}
+
+.section-categories {
+  background-color: #fafafa;
+  margin-bottom: 70px;
+  padding: 70px 0;
+}
+
+.icon-categories {
+  font-size: 55px;
+  color: #999;
+  transition: all .3s;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  height: 150px;
+  transition: all .3s ease-in-out;
+}
+
+.box:hover {
+  background-color: #00bcd4;
+  color: #fff !important;
+}
+
+.whiteColor {
+  color: #fff;
+  font-size: 45px;
+  transition: all .3s;
+}

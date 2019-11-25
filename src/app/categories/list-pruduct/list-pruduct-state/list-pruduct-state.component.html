@@ -1,0 +1,59 @@
+<div class="box-card mt-5">
+  <div class="card mb-3 border-0 shadow" *ngFor="let card of dataCard; let j = index;">
+    <div class="row no-gutters">
+      <div class="col-lg-6 d-flex">
+        <img src="{{card.image}}" class="card-img" [alt]="card.title">
+        <i class="lni-heart" (click)="like[j] = !like[j]" [ngClass]="like[j] ? 'lni-heart-filled' : ''"></i>
+      </div>
+      <div class="col-lg-6">
+        <div class="card-body">
+          <div class="d-flex">
+            <i class="lni-folder pt-1"></i>
+            <p class="pr-2 m-0"><small class="brand">{{card.brand}}</small></p>
+          </div>
+          <hr class="my-2">
+          <h5 class="card-title my-3">{{card.title}}</h5>
+          <p class="card-text"><small class="text-muted">آخرین آپدیت : {{card.hour}} ساعت پیش</small></p>
+          <div class="box-data d-flex">
+            <div class="box-data-1">
+              <div class="mb-2">
+                <a class="text-muted d-flex align-items-center">
+                  <i class="lni-map-marker text-muted pl-2"></i>
+                  {{card.local}}
+                </a>
+              </div>
+              <div class="mb-3">
+                <a class="text-muted d-flex align-items-center">
+                  <i class="lni-user text-muted pl-2"></i>
+                  {{card.user}}
+                </a>
+              </div>
+            </div>
+            <div class="box-data-2 pr-5">
+              <div class="mb-2">
+                <a class="text-muted d-flex align-items-center ">
+                  <i class="lni-alarm-clock text-muted pl-2"></i>
+                  {{card.date}}
+                </a>
+              </div>
+              <div class="mb-3">
+                <a class="text-muted d-flex align-items-center">
+                  <i class="lni-package text-muted pl-2"></i>
+                  {{card.state}}
+                </a>
+              </div>
+            </div>
+          </div>
+          <hr class="my-2">
+          <div class="footer d-flex justify-content-between align-items-center">
+            <h5 class='mb-0'>{{card.price}} دلار</h5>
+            <small (mouseenter)="hover[j] = !hover[j]" (mouseleave)="hover[j] = !hover[j]"
+              [ngClass]="hover[j] ? 'whiteColor' : ''">
+              <i class="lni-check-box pl-2" [ngClass]="hover[j] ? 'iColor' : ''"></i> تایید شده
+            </small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

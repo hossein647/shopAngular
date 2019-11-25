@@ -1,0 +1,12 @@
+.app-footer-copyright {
+    background-color: #111212;
+}
+
+.app-footer-copyright p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    margin-bottom: 0;
+    padding: 15px;
+}

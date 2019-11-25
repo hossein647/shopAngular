@@ -1,0 +1,30 @@
+<div class="box-feature">
+  <div class="container">
+    <div class="row pb-5">
+      <div class="first-box-feature col-12 col-md-6 col-lg-4 py-3" *ngFor="let box of iconsFeature[0];let i = index"
+        (mouseenter)="box.changeHover = true" (mouseleave)="box.changeHover = false">
+        <div class="card shadow" [ngClass]="box.changeHover ? 'border-color' : 'border-0'">
+          <div class="box-icon text-center mt-5">
+            <i class="{{box.classIcon}} text-center" [ngClass]="box.changeHover ? 'hovered' : 'icon-feature'"></i>
+          </div>
+          <div class="card-body text-center">
+            <h5 class="card-title text-muted">{{box.title}}</h5>
+            <h6 class="card-text text-muted font-weight-light">{{box.text}}</h6>
+          </div>
+        </div>
+      </div>
+      <div class="second-box-feature col-12 col-md-6 col-lg-4 py-3" *ngFor="let box of iconsFeature[1];let i = index"
+        (mouseenter)="box.changeHover = true" (mouseleave)="box.changeHover = false">
+        <div class="card shadow" [ngClass]="box.changeHover ? 'border-color' : 'border-0'">
+          <div class="box-icon text-center mt-5">
+            <i class="{{box.classIcon}} text-center" [ngClass]="box.changeHover ? 'hovered' : 'icon-feature'"></i>
+          </div>
+          <div class="card-body text-center">
+            <h5 class="card-title text-muted">{{box.title}}</h5>
+            <h6 class="card-text text-muted font-weight-light">{{box.text}}</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

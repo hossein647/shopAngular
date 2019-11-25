@@ -1,0 +1,507 @@
+<div class="slider-app mb-5">
+  <div class="container">
+    <h1 class="text-center text-muted">محصولات ویژه</h1>
+    <div class="carousel slide" id="section-carousel" data-ride="carousel" [ngSwitch]="mobileMode">
+      <div class="case-device d-flex justify-content-center align-items-center" id="mobile" *ngSwitchCase="true">
+        <div class="carousel-inner align-content-center">
+          <div class="carousel-item active">
+            <div class="row">
+              <div class="box-card col-12" *ngFor="let card of dataSlideMobile[0]">
+                <div class="card">
+                  <img class="card-img-top" height="176px" src="./assets/image/{{card.image}}" alt="">
+                  <div>
+                    <div class="d-flex justify-content-between align-items-center p-3">
+                      <div>
+                        <h5 class="card-title">{{card.title}}</h5>
+                        <h6 class="card-text text-muted">{{card.subtitle}}</h6>
+                      </div>
+                      <h5 class="price">{{card.price}}</h5>
+                    </div>
+                    <div class="box-rating p-3">
+                      <i class="lni-star" *ngFor="let star of stars" (click)="fill($event.target)"></i>
+                    </div>
+                  </div>
+                  <div class="border-star"></div>
+                  <div class="box-footer d-flex justify-content-between align-items-center p-3">
+                    <div class="box-location d-flex align-items-center">
+                      <small>{{card.location}}</small>
+                      <i class="lni-map-marker mb-1 pr-2"></i>
+                    </div>
+                    <i class="" (click)="likeMobile[0] = !likeMobile[0]"
+                      [ngClass]="likeMobile[0] ? 'lni-heart-filled' : 'lni-heart'"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row">
+              <div class="box-card col-12" *ngFor="let card of dataSlideMobile[1]; let cc=index">
+                <div class="card">
+                  <img class="card-img-top" height="176px" src="./assets/image/{{card.image}}" alt="">
+                  <div>
+                    <div class="d-flex justify-content-between align-items-center p-3">
+                      <div>
+                        <h5 class="card-title">{{card.title}}</h5>
+                        <h6 class="card-text text-muted">{{card.subtitle}}</h6>
+                      </div>
+                      <h5 class="price">{{card.price}}</h5>
+                    </div>
+                    <div class="box-rating p-3">
+                      <i class="lni-star" *ngFor="let star of stars" (click)="fill($event.target)"></i>
+                    </div>
+                  </div>
+                  <div class="border-star"></div>
+                  <div class="box-footer d-flex justify-content-between align-items-center p-3">
+                    <div class="box-location d-flex align-items-center">
+                      <small>{{card.location}}</small>
+                      <i class="lni-map-marker mb-1 pr-2"></i>
+                    </div>
+                    <i class="" (click)="likeMobile[1] = !likeMobile[1]"
+                      [ngClass]="likeMobile[1] ? 'lni-heart-filled' : 'lni-heart'"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row">
+              <div class="box-card col-12" *ngFor="let card of dataSlideMobile[2]">
+                <div class="card">
+                  <img class="card-img-top" height="176px" src="./assets/image/{{card.image}}" alt="">
+                  <div>
+                    <div class="d-flex justify-content-between align-items-center p-3">
+                      <div>
+                        <h5 class="card-title">{{card.title}}</h5>
+                        <h6 class="card-text text-muted">{{card.subtitle}}</h6>
+                      </div>
+                      <h5 class="price">{{card.price}}</h5>
+                    </div>
+                    <div class="box-rating p-3">
+                      <i class="lni-star" *ngFor="let star of stars" (click)="fill($event.target)"></i>
+                    </div>
+                  </div>
+                  <div class="border-star"></div>
+                  <div class="box-footer d-flex justify-content-between align-items-center p-3">
+                    <div class="box-location d-flex align-items-center">
+                      <small>{{card.location}}</small>
+                      <i class="lni-map-marker mb-1 pr-2"></i>
+                    </div>
+                    <i class="" (click)="likeMobile[2] = !likeMobile[2]"
+                      [ngClass]="likeMobile[2] ? 'lni-heart-filled' : 'lni-heart'"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row">
+              <div class="box-card col-12" *ngFor="let card of dataSlideMobile[3]">
+                <div class="card">
+                  <img class="card-img-top" height="176px" src="./assets/image/{{card.image}}" alt="">
+                  <div>
+                    <div class="d-flex justify-content-between align-items-center p-3">
+                      <div>
+                        <h5 class="card-title">{{card.title}}</h5>
+                        <h6 class="card-text text-muted">{{card.subtitle}}</h6>
+                      </div>
+                      <h5 class="price">{{card.price}}</h5>
+                    </div>
+                    <div class="box-rating p-3">
+                      <i class="lni-star" *ngFor="let star of stars" (click)="fill($event.target)"></i>
+                    </div>
+                  </div>
+                  <div class="border-star"></div>
+                  <div class="box-footer d-flex justify-content-between align-items-center p-3">
+                    <div class="box-location d-flex align-items-center">
+                      <small>{{card.location}}</small>
+                      <i class="lni-map-marker mb-1 pr-2"></i>
+                    </div>
+                    <i class="" (click)="likeMobile[3] = !likeMobile[3]"
+                      [ngClass]="likeMobile[3] ? 'lni-heart-filled' : 'lni-heart'"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row">
+              <div class="box-card col-12" *ngFor="let card of dataSlideMobile[4]">
+                <div class="card">
+                  <img class="card-img-top" height="176px" src="./assets/image/{{card.image}}" alt="">
+                  <div>
+                    <div class="d-flex justify-content-between align-items-center p-3">
+                      <div>
+                        <h5 class="card-title">{{card.title}}</h5>
+                        <h6 class="card-text text-muted">{{card.subtitle}}</h6>
+                      </div>
+                      <h5 class="price">{{card.price}}</h5>
+                    </div>
+                    <div class="box-rating p-3">
+                      <i class="lni-star" *ngFor="let star of stars" (click)="fill($event.target)"></i>
+                    </div>
+                  </div>
+                  <div class="border-star"></div>
+                  <div class="box-footer d-flex justify-content-between align-items-center p-3">
+                    <div class="box-location d-flex align-items-center">
+                      <small>{{card.location}}</small>
+                      <i class="lni-map-marker mb-1 pr-2"></i>
+                    </div>
+                    <i class="" (click)="likeMobile[4] = !likeMobile[4]"
+                      [ngClass]="likeMobile[4] ? 'lni-heart-filled' : 'lni-heart'"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row">
+              <div class="box-card col-12" *ngFor="let card of dataSlideMobile[5]">
+                <div class="card">
+                  <img class="card-img-top" height="176px" src="./assets/image/{{card.image}}" alt="">
+                  <div>
+                    <div class="d-flex justify-content-between align-items-center p-3">
+                      <div>
+                        <h5 class="card-title">{{card.title}}</h5>
+                        <h6 class="card-text text-muted">{{card.subtitle}}</h6>
+                      </div>
+                      <h5 class="price">{{card.price}}</h5>
+                    </div>
+                    <div class="box-rating p-3">
+                      <i class="lni-star" *ngFor="let star of stars" (click)="fill($event.target)"></i>
+                    </div>
+                  </div>
+                  <div class="border-star"></div>
+                  <div class="box-footer d-flex justify-content-between align-items-center p-3">
+                    <div class="box-location d-flex align-items-center">
+                      <small>{{card.location}}</small>
+                      <i class="lni-map-marker mb-1 pr-2"></i>
+                    </div>
+                    <i class="" (click)="likeMobile[5] = !likeMobile[5]"
+                      [ngClass]="likeMobile[5] ? 'lni-heart-filled' : 'lni-heart'"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row">
+              <div class="box-card col-12" *ngFor="let card of dataSlideMobile[6]">
+                <div class="card">
+                  <img class="card-img-top" height="176px" src="./assets/image/{{card.image}}" alt="">
+                  <div>
+                    <div class="d-flex justify-content-between align-items-center p-3">
+                      <div>
+                        <h5 class="card-title">{{card.title}}</h5>
+                        <h6 class="card-text text-muted">{{card.subtitle}}</h6>
+                      </div>
+                      <h5 class="price">{{card.price}}</h5>
+                    </div>
+                    <div class="box-rating p-3">
+                      <i class="lni-star" *ngFor="let star of stars" (click)="fill($event.target)"></i>
+                    </div>
+                  </div>
+                  <div class="border-star"></div>
+                  <div class="box-footer d-flex justify-content-between align-items-center p-3">
+                    <div class="box-location d-flex align-items-center">
+                      <small>{{card.location}}</small>
+                      <i class="lni-map-marker mb-1 pr-2"></i>
+                    </div>
+                    <i class="" (click)="likeMobile[6] = !likeMobile[6]"
+                      [ngClass]="likeMobile[6] ? 'lni-heart-filled' : 'lni-heart'"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row">
+              <div class="box-card col-12" *ngFor="let card of dataSlideMobile[7]">
+                <div class="card">
+                  <img class="card-img-top" height="176px" src="./assets/image/{{card.image}}" alt="">
+                  <div>
+                    <div class="d-flex justify-content-between align-items-center p-3">
+                      <div>
+                        <h5 class="card-title">{{card.title}}</h5>
+                        <h6 class="card-text text-muted">{{card.subtitle}}</h6>
+                      </div>
+                      <h5 class="price">{{card.price}}</h5>
+                    </div>
+                    <div class="box-rating p-3">
+                      <i class="lni-star" *ngFor="let star of stars" (click)="fill($event.target)"></i>
+                    </div>
+                  </div>
+                  <div class="border-star"></div>
+                  <div class="box-footer d-flex justify-content-between align-items-center p-3">
+                    <div class="box-location d-flex align-items-center">
+                      <small>{{card.location}}</small>
+                      <i class="lni-map-marker mb-1 pr-2"></i>
+                    </div>
+                    <i class="" (click)="likeMobile[7] = !likeMobile[7]"
+                      [ngClass]="likeMobile[7] ? 'lni-heart-filled' : 'lni-heart'"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row">
+              <div class="box-card col-12" *ngFor="let card of dataSlideMobile[8]">
+                <div class="card">
+                  <img class="card-img-top" height="176px" src="./assets/image/{{card.image}}" alt="">
+                  <div>
+                    <div class="d-flex justify-content-between align-items-center p-3">
+                      <div>
+                        <h5 class="card-title">{{card.title}}</h5>
+                        <h6 class="card-text text-muted">{{card.subtitle}}</h6>
+                      </div>
+                      <h5 class="price">{{card.price}}</h5>
+                    </div>
+                    <div class="box-rating p-3">
+                      <i class="lni-star" *ngFor="let star of stars" (click)="fill($event.target)"></i>
+                    </div>
+                  </div>
+                  <div class="border-star"></div>
+                  <div class="box-footer d-flex justify-content-between align-items-center p-3">
+                    <div class="box-location d-flex align-items-center">
+                      <small>{{card.location}}</small>
+                      <i class="lni-map-marker mb-1 pr-2"></i>
+                    </div>
+                    <i class="" (click)="likeMobile[8] = !likeMobile[8]"
+                      [ngClass]="likeMobile[8] ? 'lni-heart-filled' : 'lni-heart'"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="case-device d-flex justify-content-center align-items-center" id="tablet" *ngSwitchCase="false">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="row">
+              <div class="box-card col-md-6" *ngFor="let card of dataSlideTablet[0]; let t = index">
+                <div class="card">
+                  <img class="card-img-top" height="176px" src="./assets/image/{{card.image}}" alt="">
+                  <div>
+                    <div class="d-flex justify-content-between align-items-center p-3">
+                      <div>
+                        <h5 class="card-title">{{card.title}}</h5>
+                        <h6 class="card-text text-muted">{{card.subtitle}}</h6>
+                      </div>
+                      <h5 class="price">{{card.price}}$</h5>
+                    </div>
+                    <div class="box-rating p-3">
+                      <i class="lni-star" *ngFor="let star of stars" (click)="fill($event.target)"></i>
+                    </div>
+                  </div>
+                  <div class="border-star"></div>
+                  <div class="box-footer d-flex justify-content-between align-items-center p-3">
+                    <div class="box-location d-flex align-items-center">
+                      <small>{{card.location}}</small>
+                      <i class="lni-map-marker mb-1 pr-2"></i>
+                    </div>
+                    <i class="" (click)="likeTabletSlide1[t] = !likeTabletSlide1[t]"
+                      [ngClass]="likeTabletSlide1[t] ? 'lni-heart-filled' : 'lni-heart'"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row">
+              <div class="box-card col-md-6" *ngFor="let card of dataSlideTablet[1]; let t = index">
+                <div class="card">
+                  <img class="card-img-top" height="176px" src="./assets/image/{{card.image}}" alt="">
+                  <div>
+                    <div class="d-flex justify-content-between align-items-center p-3">
+                      <div>
+                        <h5 class="card-title">{{card.title}}</h5>
+                        <h6 class="card-text text-muted">{{card.subtitle}}</h6>
+                      </div>
+                      <h5 class="price">{{card.price}}</h5>
+                    </div>
+                    <div class="box-rating p-3">
+                      <i class="lni-star" *ngFor="let star of stars" (click)="fill($event.target)"></i>
+                    </div>
+                  </div>
+                  <div class="border-star"></div>
+                  <div class="box-footer d-flex justify-content-between align-items-center p-3">
+                    <div class="box-location d-flex align-items-center">
+                      <small>{{card.location}}</small>
+                      <i class="lni-map-marker mb-1 pr-2"></i>
+                    </div>
+                    <i class="" (click)="likeTabletSlide2[t] = !likeTabletSlide2[t]"
+                      [ngClass]="likeTabletSlide2[t] ? 'lni-heart-filled' : 'lni-heart'"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row">
+              <div class="box-card col-md-6" *ngFor="let card of dataSlideTablet[2]; let t = index">
+                <div class="card">
+                  <img class="card-img-top" height="176px" src="./assets/image/{{card.image}}" alt="">
+                  <div>
+                    <div class="d-flex justify-content-between align-items-center p-3">
+                      <div>
+                        <h5 class="card-title">{{card.title}}</h5>
+                        <h6 class="card-text text-muted">{{card.subtitle}}</h6>
+                      </div>
+                      <h5 class="price">{{card.price}}</h5>
+                    </div>
+                    <div class="box-rating p-3">
+                      <i class="lni-star" *ngFor="let star of stars" (click)="fill($event.target)"></i>
+                    </div>
+                  </div>
+                  <div class="border-star"></div>
+                  <div class="box-footer d-flex justify-content-between align-items-center p-3">
+                    <div class="box-location d-flex align-items-center">
+                      <small>{{card.location}}</small>
+                      <i class="lni-map-marker mb-1 pr-2"></i>
+                    </div>
+                    <i class="" (click)="likeTabletSlide2[t] = !likeTabletSlide2[t]"
+                      [ngClass]="likeTabletSlide2[t] ? 'lni-heart-filled' : 'lni-heart'"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row">
+              <div class="box-card col-md-6" *ngFor="let card of dataSlideTablet[3]; let t = index">
+                <div class="card">
+                  <img class="card-img-top" height="176px" src="./assets/image/{{card.image}}" alt="">
+                  <div>
+                    <div class="d-flex justify-content-between align-items-center p-3">
+                      <div>
+                        <h5 class="card-title">{{card.title}}</h5>
+                        <h6 class="card-text text-muted">{{card.subtitle}}</h6>
+                      </div>
+                      <h5 class="price">{{card.price}}</h5>
+                    </div>
+                    <div class="box-rating p-3">
+                      <i class="lni-star" *ngFor="let star of stars" (click)="fill($event.target)"></i>
+                    </div>
+                  </div>
+                  <div class="border-star"></div>
+                  <div class="box-footer d-flex justify-content-between align-items-center p-3">
+                    <div class="box-location d-flex align-items-center">
+                      <small>{{card.location}}</small>
+                      <i class="lni-map-marker mb-1 pr-2"></i>
+                    </div>
+                    <i class="" (click)="likeTabletSlide3[t] = !likeTabletSlide3[t]"
+                      [ngClass]="likeTabletSlide3[t] ? 'lni-heart-filled' : 'lni-heart'"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="case-device d-flex justify-content-center align-items-center" id="desktop" *ngSwitchDefault>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="row">
+              <div class="box-card col-lg-3" *ngFor="let card of data[0];let i=index">
+                <div class="card">
+                  <img class="card-img-top" height="176px" src="./assets/image/{{card.image}}" alt="">
+                  <div>
+                    <div class="d-flex justify-content-between align-items-center p-3">
+                      <div>
+                        <h5 class="card-title">{{card.title}}</h5>
+                        <h6 class="card-text text-muted">{{card.subtitle}}</h6>
+                      </div>
+                      <h5 class="price">{{card.price}}$</h5>
+                    </div>
+                    <div class="box-rating p-3">
+                      <i class="lni-star" *ngFor="let star of stars" (mouseenter)="fill($event.target)"></i>
+                    </div>
+                  </div>
+                  <div class="border-star"></div>
+                  <div class="box-footer d-flex justify-content-between align-items-center p-3">
+                    <div class="box-location d-flex align-items-center">
+                      <small>{{card.location}}</small>
+                      <i class="lni-map-marker mb-1 pr-2"></i>
+                    </div>
+                    <i class="" (click)="likeDesktopSlide1[i] = !likeDesktopSlide1[i]" 
+                      [ngClass]="likeDesktopSlide1[i] ? 'lni-heart-filled' : 'lni-heart'"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row">
+              <div class="box-card col-lg-3" *ngFor="let card of data[1];let ii = index">
+                <div class="card">
+                  <img class="card-img-top" height="176px" src="./assets/image/{{card.image}}" alt="">
+                  <div>
+                    <div class="d-flex justify-content-between align-items-center p-3">
+                      <div>
+                        <h5 class="card-title">{{card.title}}</h5>
+                        <h6 class="card-text text-muted">{{card.subtitle}}</h6>
+                      </div>
+                      <h5 class="price">{{card.price}}$</h5>
+                    </div>
+                    <div class="box-rating p-3">
+                      <i class="lni-star"  *ngFor="let star of stars" (mouseenter)="fill($event.target)"></i>
+                    </div>
+                  </div>
+                  <div class="border-star"></div>
+                  <div class="box-footer d-flex justify-content-between align-items-center p-3">
+                    <div class="box-location d-flex align-items-center">
+                      <small>{{card.location}}</small>
+                      <i class="lni-map-marker mb-1 pr-2"></i>
+                    </div>
+                    <i class="" (click)="likeDesktopSlide2[ii] = !likeDesktopSlide2[ii]"
+                      [ngClass]="likeDesktopSlide2[ii] ? 'lni-heart-filled' : 'lni-heart'"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row">
+              <div class="box-card col-lg-3" *ngFor="let card of data[2];let iii =index">
+                <div class="card">
+                  <img class="card-img-top" height="176px" src="./assets/image/{{card.image}}" alt="">
+                  <div>
+                    <div class="d-flex justify-content-between align-items-center p-3">
+                      <div>
+                        <h5 class="card-title">{{card.title}}</h5>
+                        <h6 class="card-text text-muted">{{card.subtitle}}</h6>
+                      </div>
+                      <h5 class="price">{{card.price}}$</h5>
+                    </div>
+                    <div class="box-rating p-3">
+                      <i class="lni-star" *ngFor="let star of stars" (mouseenter)="fill($event.target)"></i>
+                    </div>
+                  </div>
+                  <div class="border-star"></div>
+                  <div class="box-footer d-flex justify-content-between align-items-center p-3">
+                    <div class="box-location d-flex align-items-center">
+                      <small>{{card.location}}</small>
+                      <i class="lni-map-marker mb-1 pr-2"></i>
+                    </div>
+                    <i class="" (click)="likeDesktopSlide3[iii] = !likeDesktopSlide3[iii]"
+                      [ngClass]="likeDesktopSlide3[iii] ? 'lni-heart-filled' : 'lni-heart'"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-next" href="#section-carousel" role="button" data-slide="prev">
+        <i class="lni-chevron-right"></i>
+      </a>
+      <a class="carousel-control-prev" href="#section-carousel" role="button" data-slide="next">
+        <i class="lni-chevron-left"></i>
+      </a>
+    </div>
+  </div>
+</div>

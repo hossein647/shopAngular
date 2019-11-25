@@ -1,0 +1,117 @@
+<!-- <header> -->
+<nav class="navbar fixed-top navbar-expand-lg py-0">
+  <div class="container">
+    <a class="navbar-brand p-0 m-0" routerLink="/">
+      <img src="./assets/image/logo.png" alt="">
+    </a>
+    <span class="navbar-toggler px-0 collapsed" data-toggle="collapse" data-target="#navbarCollapse"
+      (click)="clickListener()">
+      <i class="lni-menu"></i>
+    </span>
+    <div class="nav-menu collapse navbar-collapse justify-content-between" id="navbarCollapse">
+      <ul class="navbar-nav ul-1">
+        <li class="nav-item"><a routerLink="/" class="nav-link">خانه</a></li>
+        <li class="nav-item">
+          <a routerLink="/categories" class="nav-link dropdown-toggle" data-toggle="dropdown"
+            (mouseenter)="hover = !hover" (mouseleave)="hover = !hover">دسته بندیها</a>
+          <div class="dropdown-menu" [ngClass]="hover ? 'show' : ''" (mouseenter)="hover = !hover"
+            (mouseleave)="hover = !hover">
+            <button class="dropdown-item" type="button" *ngFor="let items of itemMenu">{{ items }}</button>
+          </div>
+        </li>
+        <li class="nav-item"><a routerLink="/lists" class="nav-link">لیست ها</a></li>
+        <li class="nav-item"><a routerLink="/pages" class="nav-link">صفحات</a></li>
+        <li class="nav-item"><a routerLink="/blog" class="nav-link">وبلاگ</a></li>
+        <li class="nav-item"><a routerLink="/contact-us" class="nav-link">تماس با ما</a></li>
+      </ul>
+      <ul class="navbar-nav ul-2">
+        <li class="nav-item account"><a href="#" class="nav-link mx-2 bg-white text-dark ">حساب من</a></li>
+        <li class="nav-item ad"><a href="#" class="nav-link mx-2">تبلیغات</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div *ngIf="router.url === '/'; else hideWelcom">
+  <div class="header-div" id="header">
+    <div class="overlay" id="overlay"> </div>
+    <div class="container">
+        <div id="box-welcom">
+          <h1 class="text-white" id="box-welcom" >به فروشگاه ما خوش آمدید</h1>
+          <p class="text-white" id="box-welcom" >خرید و فروش هر چیزی از شیر مرغ تا جون آدمیزاد</p>
+        </div>
+      <div class="search-bar rounded">
+        <form>
+          <div class="search-inner p-4 rounded d-flex flex-column flex-lg-row align-items-center">
+            <div class="div-1 mb-1 mb-lg-0 ml-lg-2 w-100">
+              <i class="icon lni-tag pr-3"></i>
+              <input class="form-control pr-5 pt-lg-2" type="text" placeholder="انتخاب محصول">
+            </div>
+            <div class="div-2 mb-1 mb-lg-0 ml-lg-2 w-100">
+              <i class="icon lni-menu pr-3"></i>
+              <div class="div2-1 w-100 d-flex align-items-center justify-content-end">
+                <select class="custom-select pr-5 pt-lg-2" name="location" id="location-select">
+                  <option value="1" selected>انتخاب دسته بندی</option>
+                  <option value="1" *ngFor="let items of itemSearchCategoreis">{{items}}</option>
+                </select>
+              </div>
+            </div>
+            <div class="div-3 mb-1 mb-lg-0 ml-lg-2 w-100">
+              <i class="icon lni-map-marker pr-3"></i>
+              <select class="custom-select pr-5 pt-lg-2" name="location" id="location-select">
+                <option value="1" selected>انتخاب منطقه</option>
+                <option value="1" *ngFor="let items of itemSearchLocla">{{items}}</option>
+              </select>
+            </div>
+            <div class="div-4">
+              <button class="btn btn-info">جستجو</button>
+              <i class="icon icon-btn-search lni-search pr-3"></i>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<ng-template #hideWelcom>
+      <div class="header-div" id="header" [style.min-height]="'400px'">
+        <div class="overlay" id="overlay" [style.min-height]="'400px'"> </div>
+        <div class="container">
+            <div id="box-welcom" [style.display]="'none'">
+              <h1 class="text-white">به فروشگاه ما خوش آمدید</h1>
+              <p class="text-white">خرید و فروش هر چیزی از شیر مرغ تا جون آدمیزاد</p>
+            </div>
+          <div class="search-bar rounded">
+            <form>
+              <div class="search-inner p-4 rounded d-flex flex-column flex-lg-row align-items-center">
+                <div class="div-1 mb-1 mb-lg-0 ml-lg-2 w-100">
+                  <i class="icon lni-tag pr-3"></i>
+                  <input class="form-control pr-5 pt-lg-2" type="text" placeholder="انتخاب محصول">
+                </div>
+                <div class="div-2 mb-1 mb-lg-0 ml-lg-2 w-100">
+                  <i class="icon lni-menu pr-3"></i>
+                  <div class="div2-1 w-100 d-flex align-items-center justify-content-end">
+                    <select class="custom-select pr-5 pt-lg-2" name="location" id="location-select">
+                      <option value="1" selected>انتخاب دسته بندی</option>
+                      <option value="1" *ngFor="let items of itemSearchCategoreis">{{items}}</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="div-3 mb-1 mb-lg-0 ml-lg-2 w-100">
+                  <i class="icon lni-map-marker pr-3"></i>
+                  <select class="custom-select pr-5 pt-lg-2" name="location" id="location-select">
+                    <option value="1" selected>انتخاب منطقه</option>
+                    <option value="1" *ngFor="let items of itemSearchLocla">{{items}}</option>
+                  </select>
+                </div>
+                <div class="div-4">
+                  <button class="btn btn-info">جستجو</button>
+                  <i class="icon icon-btn-search lni-search pr-3"></i>
+                </div>
+
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+</ng-template>
+

@@ -1,0 +1,77 @@
+.app-package .container h1 {
+    position: relative;
+}
+.app-package .container h1::before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 2px;
+  background-color: #00bcd4;
+  right: 47.2%;
+  top: 60px;
+}
+
+.card {
+  border: 0;
+}
+
+.box-icon h6 {
+  margin: 30px 0;
+  font-size: 32px;
+}
+
+.box-icon h5 {
+  margin-bottom: 30px;
+  font-size: 40px;
+}
+
+.box-icon h5,
+.box-icon i {
+  color: #00bcd4;
+}
+
+.box-icon .sp-price {
+  font-size: 15px;
+  color: #00bcd4;
+}
+
+.box-icon .sp-arz {
+  font-size: 15px;
+  color: #00bcd4;
+  display: flex;
+  align-items: center;
+  margin-top: -18px;
+}
+
+button {
+  background-color: #00bcd4;
+  color: #fff;
+  padding: 7px 35px;
+  font-size: 18px;
+  border-radius: 50px;
+}
+
+button:hover {
+  color: #fff;
+  background-color: #4dd0e1;
+}
+
+.border-color {
+  border-bottom: 4px solid #00bcd4 !important;
+  transition: all .3s ease-in-out;
+}
+
+/* =======================================================
+                     Media-query
+   =======================================================
+*/
+
+@media(max-width: 425px){
+  .app-package h1 {
+    font-size: 30px !important;
+  }
+
+  .app-package h1::before {
+    top: 45px !important;
+  }
+}

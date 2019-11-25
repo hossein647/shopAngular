@@ -1,0 +1,33 @@
+/* ==============================================
+                    sidebar
+      ==============================================*/
+
+.sidebar-right {
+  background-color: #f1f1f1;
+  border-radius: 5px;
+}
+
+.sidebar-right h4,
+.sidebar-right hr,
+.sidebar-right ul {
+  padding: 10px 15px 10px 10px !important;
+}
+
+.sidebar-right hr {
+  margin: 0 15px;
+}
+
+.nav-item>div a:hover {
+  color: #00bcd4 !important;
+  transition: all .3s;
+}
+
+ul a,
+ul span {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+ul i {
+  font-weight: 600
+}

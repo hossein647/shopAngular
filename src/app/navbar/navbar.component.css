@@ -1,0 +1,295 @@
+a {
+  color: #2e2e2e;
+}
+
+.icon {
+  color: #00bcd4;
+}
+
+nav a {
+  color: white;
+}
+
+nav a img {
+  width: 200px;
+  height: 64px;
+}
+
+nav li a {
+  font-size: 16px;
+}
+
+nav i {
+  font-size: 25px;
+  color: #00bcd4;
+  border: 1px solid #00bcd4;
+  padding: 5px 8px;
+}
+
+.account a,
+.ad a {
+  border-radius: 5px;
+}
+
+.ul-1 a:hover {
+  color: #00bcd4;
+}
+
+.ul-2 .ad {
+  background-color: #00bcd4;
+  border-radius: 5px;
+}
+
+.scroll-change {
+  background-color: #fff;
+  transition: all .5s ease-in-out;
+}
+
+.nav-a-change {
+  color: #000 !important;
+  transition: all .3s ease-in-out;
+}
+
+.nav-a-change:hover {
+  color: #00bcd4 !important;
+}
+
+.account-button-change {
+  color: #fff !important;
+  background-color: #00bcd4 !important;
+}
+
+.account-button-change:hover,
+.account-button-change:focus {
+  color: #fff !important;
+}
+
+/*   ---------------------------------------------------------------------
+                           Dropdown
+     --------------------------------------------------------------------- */
+.dropdown-menu {
+  /* top: 77%; */
+  right: 36%;
+  left: 54%;
+  top: 70%;
+  text-align: right;
+  border: 0;
+  padding: 10px;
+  min-width: 200px;
+}
+
+.dropdown-menu::before {
+  position: absolute;
+  top: -8px;
+  right: 22px;
+  display: block;
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 9px 8px;
+  border-color: transparent transparent #fff;
+  box-sizing: border-box;
+}
+
+.dropdown-item {
+  border-radius: 3px;
+  margin-bottom: 2px;
+  background-color: transparent;
+}
+
+.dropdown-item:focus,
+.dropdown-item:hover {
+  transition: all .4s ease-in-out;
+  background-color: #007bff;
+  color: white;
+  outline: 0;
+}
+
+.dropdown-open {
+  display: block !important;
+}
+
+.dropdown-close {
+  display: none !important;
+}
+
+.dropdown-toggle::after {
+  display: none;
+}
+
+/*   ---------------------------------------------------------------------
+                           Header
+     --------------------------------------------------------------------- */
+
+.header-div {
+  background-image: url(src/assets/image/hero-area.jpg);
+  background-size: cover;
+  min-height: 500px;
+  padding-top: 200px;
+}
+
+.header-div p,
+.header-div h1 {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  line-height: 50px
+}
+
+.header-div h1 {
+  font-size: 42px;
+  font-weight: 700;
+}
+
+.overlay {
+  content: "";
+  width: 100%;
+  min-height: 500px;
+  left: 0;
+  top: 0;
+  position: absolute;
+  background: rgba(54, 59, 77, .88);
+}
+
+/*   ---------------------------------------------------------------------
+                           Search
+     --------------------------------------------------------------------- */
+
+.search-bar {
+  margin-top: 40px;
+
+}
+
+.search-bar .search-inner {
+  background: rgba(128, 128, 128, .5) !important;
+  position: relative;
+}
+
+.search-inner i {
+  position: absolute;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.search-inner .icon-btn-search {
+  color: #fff !important;
+  font-size: 20px;
+}
+
+.custom-select {
+  background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat left .75rem center/8px 10px;
+  background-color: #fff
+}
+
+.search-inner .div-1,
+.search-inner .div-2,
+.search-inner .div-3,
+.search-inner .div-4 {
+  display: flex;
+  align-items: center;
+}
+
+.search-inner .div-4 {
+  margin: 0;
+  width: 25%;
+}
+
+.search-inner .div-4 button {
+  width: 100%;
+  padding-left: 16px;
+}
+
+/*   ---------------------------------------------------------------------
+                           MEdia-Query
+     --------------------------------------------------------------------- */
+
+@media(min-width: 320px) {}
+
+@media(min-width: 460px) {}
+
+@media(min-width: 768px) {}
+
+@media(min-width: 992px) {
+
+  .nav-menu .ul-1 {
+    margin-right: 8px;
+  }
+
+  .search-inner button {
+    padding-right: 40px;
+  }
+}
+
+@media(max-width: 991px) {
+
+  .navbar {
+    background-image: linear-gradient(to bottom, transparent 50%, rgb(255, 255, 255) 50%);
+    background-size: 100% 200%;
+    transition: background-position .2s;
+  }
+
+  .change-bg {
+    background-position: 0 -100%;
+    border-bottom: 1px solid rgb(221, 221, 221);
+  }
+
+  .change-link {
+    color: #000 !important;
+  }
+
+  nav .ul-2 li {
+    background-color: transparent;
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .ul-2 li a {
+    margin-right: 0 !important;
+    color: #00bcd4 !important;
+  }
+
+  .ul-2 li {
+    background-color: transparent !important;
+  }
+
+  .account-button-change {
+    color: #00bcd4 !important;
+    background-color: #fff !important;
+  }
+
+  .overlay {
+    min-width: 600px;
+  }
+
+  .search-bar {
+    padding-bottom: 40px;
+  }
+
+  .search-inner .div-4 {
+    margin-top: 15px;
+    width: 50%;
+  }
+
+  .search-inner .div-4 button {
+    width: 100% !important;
+  }
+
+  .search-inner .div-4 i {
+    display: none;
+  }
+
+}
+
+@media(min-width: 1200px) {
+  .nav-menu .ul-1 {
+    margin-right: 50px;
+  }
+
+  .nav-menu .ul-1 li a {
+    padding-right: 20px !important;
+    padding-left: 20px !important;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}

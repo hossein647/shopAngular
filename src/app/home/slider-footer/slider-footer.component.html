@@ -1,0 +1,95 @@
+<div class="slider-footer mb-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="carousel slide" id="carouselSilde" data-ride="carousel">
+          <div class="carousel-inner" [ngSwitch]="mobileSize">
+            <div *ngSwitchCase="true">
+              <div class="carousel-inner">
+                <div class="carousel-item" *ngFor="let slide of slides;let i = index" #div>
+                  <div class="row">
+                    <div class="col-12">
+                      <div class="card my-5">
+                        <div class="row no-gutters">
+                          <div class="col-md-3 d-flex align-items-center">
+                            <img src="{{slide[0].image}}" class="card-img" alt="profile-image">
+                            <h5 class="card-title">{{slide[0].title}}</h5>
+                          </div>
+                          <div class="col-md-9">
+                            <div class="card-body pr-0">
+                              <p class="card-text">{{slide[0].describtion}}</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div *ngSwitchCase="false">
+              <div class="carousel-inner">
+                <div class="carousel-item" *ngFor="let slide of slides;let i = index" #div>
+                  <div class="row">
+                    <div class="col-12">
+                      <div class="card my-5">
+                        <div class="row no-gutters">
+                          <div class="col-md-3">
+                            <img src="{{slide[0].image}}" class="card-img" alt="profile-image">
+                          </div>
+                          <div class="col-md-9">
+                            <div class="card-body pr-0">
+                              <h5 class="card-title">{{slide[0].title}}</h5>
+                              <p class="card-text">{{slide[0].describtion}}</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div *ngSwitchDefault>
+              <div class="carousel-inner">
+                <div class="carousel-item" *ngFor="let slide of slides;let i = index" #div>
+                  <div class="row">
+                    <div class="col-6">
+                      <div class="card my-5">
+                        <div class="row no-gutters">
+                          <div class="col-md-3">
+                            <img src="{{slide[0].image}}" class="card-img" alt="profile-image">
+                          </div>
+                          <div class="col-md-9">
+                            <div class="card-body pr-0">
+                              <h5 class="card-title">{{slide[0].title}}</h5>
+                              <p class="card-text">{{slide[0].describtion}}</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="card my-5">
+                        <div class="row no-gutters">
+                          <div class="col-md-3">
+                            <img src="{{slide[1].image}}" class="card-img" alt="profile-image">
+                          </div>
+                          <div class="col-md-9">
+                            <div class="card-body pr-0">
+                              <h5 class="card-title">{{slide[1].title}}</h5>
+                              <p class="card-text">{{slide[1].describtion}}</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
